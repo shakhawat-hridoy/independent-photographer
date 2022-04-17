@@ -6,7 +6,8 @@ import photographer3 from "../../../images/photographer3.jpg";
 
 const Home = () => {
   return (
-    <div className="w-100">
+    <div>
+      <h2 className="text-primary">home</h2>
       <Carousel>
         <Carousel.Item>
           <img

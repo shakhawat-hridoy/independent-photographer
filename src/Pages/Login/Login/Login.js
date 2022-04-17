@@ -1,6 +1,9 @@
 import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 
@@ -12,14 +15,34 @@ const Login = () => {
 
   let from = location.state?.from?.pathname || "/";
 
-  const [signInWithEmailAndPassword, user, loading, error] =
-    useSignInWithEmailAndPassword(auth);
+  const [
+    signInWithEmailAndPassword,
+    userEmailSignIn,
+    loadingEmailSignIn,
+    errorEmailSignIn,
+  ] = useSignInWithEmailAndPassword(auth);
+  const [
+    signInWithGoogle,
+    userGoogleSignIn,
+    loadingGoogleSignIn,
+    errorGoogleSignIn,
+  ] = useSignInWithGoogle(auth);
 
-  if (user) {
+  const navigateRegister = () => {
+    navigate("/register");
+  };
+
+  if (errorEmailSignIn || errorGoogleSignIn) {
+    <div>
+      <p className="text-danger">Error: {errorGoogleSignIn.message}</p>
+    </div>;
+  }
+
+  if (userEmailSignIn || userGoogleSignIn) {
     navigate(from, { replace: true });
   }
 
-  const handleSubmit = (event) => {
+  const handleLogin = (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
@@ -27,14 +50,14 @@ const Login = () => {
     signInWithEmailAndPassword(email, password);
   };
 
-  const navigateRegister = () => {
-    navigate("/register");
+  const handleGoogleSignIn = () => {
+    signInWithGoogle();
   };
 
   return (
     <div className="container w-50 mx-auto my-5">
       <h2 className="text-primary text-center">Please Login</h2>
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleLogin}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
@@ -68,6 +91,27 @@ const Login = () => {
           Please Register
         </span>
       </p>
+
+      {/* extra login option('s) */}
+      <div className="d-flex align-items-center my-4">
+        <div
+          style={{ border: "1px solid black", width: "50%", height: "0.1px" }}
+        ></div>
+        <span className="mx-2">
+          <b>or</b>
+        </span>
+        <div
+          style={{ border: "1px solid black", width: "50%", height: "0.1px" }}
+        ></div>
+      </div>
+      <div className="text-center">
+        <button
+          onClick={handleGoogleSignIn}
+          className="btn btn-dark border border-dark p-2"
+        >
+          Sign In with Google
+        </button>
+      </div>
     </div>
   );
 };

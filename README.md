@@ -2,7 +2,7 @@
 
 Capture your moments with me.
 
-- [Live Link](https://github.com/facebook/create-react-app).
+(https://photographer-hr.netlify.app/login).
 
 ## Its a personal website for advertising one's photography services.
 

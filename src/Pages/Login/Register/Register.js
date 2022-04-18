@@ -1,8 +1,12 @@
 import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useCreateUserWithEmailAndPassword,
+  useSendEmailVerification,
+} from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
+import Loading from "../../Loading/Loading";
 
 const Login = () => {
   const nameRef = useRef("");
@@ -11,7 +15,28 @@ const Login = () => {
   const navigate = useNavigate();
 
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+  let errorMessage = "";
+
+  if (loading) {
+    return <Loading></Loading>;
+  }
+
+  if (error) {
+    errorMessage = (
+      <div>
+        <p className="text-danger">Error: {error.message}</p>
+      </div>
+    );
+  }
+
+  const navigateLogin = () => {
+    navigate("/login");
+  };
+
+  if (user) {
+    navigate("/home");
+  }
 
   const handleRegister = (event) => {
     event.preventDefault();
@@ -19,10 +44,6 @@ const Login = () => {
     const password = passwordRef.current.value;
 
     createUserWithEmailAndPassword(email, password);
-  };
-
-  const navigateLogin = () => {
-    navigate("/login");
   };
 
   return (
@@ -52,6 +73,7 @@ const Login = () => {
             required
           />
         </Form.Group>
+        {errorMessage}
         <Button variant="dark" type="submit">
           Register
         </Button>

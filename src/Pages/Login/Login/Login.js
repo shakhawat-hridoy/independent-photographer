@@ -5,7 +5,12 @@ import {
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import { useLocation, useNavigate } from "react-router-dom";
+import Loading from "../../Loading/Loading";
 import auth from "../../../firebase.init";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import ExtraLogin from "../ExtraLogin/ExtraLogin";
+import { useSendPasswordResetEmail } from "react-firebase-hooks/auth";
 
 const Login = () => {
   const emailRef = useRef("");
@@ -21,24 +26,27 @@ const Login = () => {
     loadingEmailSignIn,
     errorEmailSignIn,
   ] = useSignInWithEmailAndPassword(auth);
-  const [
-    signInWithGoogle,
-    userGoogleSignIn,
-    loadingGoogleSignIn,
-    errorGoogleSignIn,
-  ] = useSignInWithGoogle(auth);
+
+  const [sendPasswordResetEmail, sending, errorPasswordReset] =
+    useSendPasswordResetEmail(auth);
 
   const navigateRegister = () => {
     navigate("/register");
   };
+  let errorMessage = "";
 
-  if (errorEmailSignIn || errorGoogleSignIn) {
-    <div>
-      <p className="text-danger">Error: {errorGoogleSignIn.message}</p>
-    </div>;
+  if (loadingEmailSignIn) {
+    return <Loading></Loading>;
+  }
+  if (errorEmailSignIn) {
+    errorMessage = (
+      <div>
+        <p className="text-danger">Error: {errorEmailSignIn.message}</p>
+      </div>
+    );
   }
 
-  if (userEmailSignIn || userGoogleSignIn) {
+  if (userEmailSignIn) {
     navigate(from, { replace: true });
   }
 
@@ -50,8 +58,10 @@ const Login = () => {
     signInWithEmailAndPassword(email, password);
   };
 
-  const handleGoogleSignIn = () => {
-    signInWithGoogle();
+  const handleResetPassword = async () => {
+    const email = emailRef.current.value;
+    await sendPasswordResetEmail(email);
+    toast("email sent");
   };
 
   return (
@@ -77,6 +87,7 @@ const Login = () => {
             required
           />
         </Form.Group>
+        {errorMessage}
         <Button variant="primary" type="submit">
           Log in
         </Button>
@@ -91,27 +102,22 @@ const Login = () => {
           Please Register
         </span>
       </p>
+      <p>
+        Forgot password?{" "}
+        <span
+          style={{ cursor: "pointer" }}
+          className="text-primary"
+          onClick={handleResetPassword}
+        >
+          Reset password
+        </span>
+      </p>
 
       {/* extra login option('s) */}
-      <div className="d-flex align-items-center my-4">
-        <div
-          style={{ border: "1px solid black", width: "50%", height: "0.1px" }}
-        ></div>
-        <span className="mx-2">
-          <b>or</b>
-        </span>
-        <div
-          style={{ border: "1px solid black", width: "50%", height: "0.1px" }}
-        ></div>
-      </div>
-      <div className="text-center">
-        <button
-          onClick={handleGoogleSignIn}
-          className="btn btn-dark border border-dark p-2"
-        >
-          Sign In with Google
-        </button>
-      </div>
+      <ExtraLogin></ExtraLogin>
+
+      {/* For reseting password with toast toast */}
+      <ToastContainer />
     </div>
   );
 };

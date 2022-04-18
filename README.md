@@ -2,7 +2,7 @@
 
 Capture your moments with me.
 
-(https://photographer-hr.netlify.app/login).
+(https://photographer-hr.netlify.app/).
 
 ## Its a personal website for advertising one's photography services.
 

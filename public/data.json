@@ -1,22 +1,43 @@
 [
     {
         "id":1,
-        "img":"https://images.unsplash.com/photo-1559239931-a8ab168bec03?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
-        "name":"wedding",
+        "img":"https://images.unsplash.com/photo-1573676048035-9c2a72b6a12a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHdlZGRpbmclMjBwaG90b2dyYXBoeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+        "name":"Wedding",
         "price":20000,
         "description":"kuahdawkusjhdkajhku"
     },
     {
         "id":2,
-        "img":"https://images.unsplash.com/photo-1559239931-a8ab168bec03?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
-        "name":"Party",
+        "img":"https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fG1vZGVsaW5nJTIwcGhvdG9ncmFwaHklMjBzZXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        "name":"Modeling",
         "price":30000,
-        "description":"kuahdawkusjhdkajhkukjsdfhaksujdhaskujdhiuskdhiUK"
+        "description":"kuahdawkusjhdkajhkukjsdfhaksujdhask"
     },
     {
         "id":3,
-        "img":"https://images.unsplash.com/photo-1559239931-a8ab168bec03?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
-        "name":"wildlife",
+        "img":"https://images.unsplash.com/photo-1551818255-e6e10975bc17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29ycG9yYXRlJTIwZXZlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        "name":"Corporate Event",
+        "price":15000,
+        "description":"kuahdawkusjhdekjdfkajskSDjlakdjlKkajhku"
+    },
+    {
+        "id":4,
+        "img":"https://images.unsplash.com/photo-1582711012124-a56cf82307a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZmVzdGl2YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        "name":"Festival",
+        "price":15000,
+        "description":"kuahdawkusjhdekjdfkajskSDjlakdjlKkajhku"
+    },
+    {
+        "id":5,
+        "img":"https://images.unsplash.com/photo-1566004100631-35d015d6a491?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+        "name":"Baby",
+        "price":15000,
+        "description":"kuahdawkusjhdekjdfkajskSDjlakdjlKkajhku"
+    },
+    {
+        "id":6,
+        "img":"https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dW5pdmVyc2l0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60",
+        "name":"University Days",
         "price":15000,
         "description":"kuahdawkusjhdekjdfkajskSDjlakdjlKkajhku"
     }

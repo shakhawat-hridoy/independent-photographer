@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import auth from "../../../firebase.init";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
+import logo from "../../../images/logo.png";
 
 const Header = () => {
   const [user] = useAuthState(auth);
@@ -22,8 +23,12 @@ const Header = () => {
       >
         <Container className="py-2">
           <Navbar.Brand as={Link} to="/">
-            Photographer
+            <img height={25} className="rounded mb-1" src={logo} alt="" />
+            <span className="ms-2">Photographer</span>
           </Navbar.Brand>
+          {/* <Navbar.Brand as={Link} to="/">
+            Photographer
+          </Navbar.Brand> */}
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto"></Nav>

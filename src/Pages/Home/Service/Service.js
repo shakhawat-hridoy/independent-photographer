@@ -9,9 +9,9 @@ const Service = ({ service }) => {
     navigate(`/service/${id}`);
   };
   return (
-    <div className="g-5 col-sm-12 col-md-6 col-lg-4 mb-5">
+    <div className="g-4 col-sm-12 col-md-6 col-lg-4 mb-5">
       <div className="card shadow-lg">
-        <img src={img} className=" card-img-top" alt="" />
+        <img height={250} src={img} className=" card-img-top" alt="" />
         <div className="card-body">
           <h5 className="card-title">{name}</h5>
           <h5 className="card-title">{price}</h5>

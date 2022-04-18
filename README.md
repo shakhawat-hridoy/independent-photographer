@@ -2,7 +2,9 @@
 
 Capture your moments with me.
 
-## Its a personal website for advertising one's photograpgy service.
+- [Live Link](https://github.com/facebook/create-react-app).
+
+## Its a personal website for advertising one's photography services.
 
 - It shows the packages offered by the photographer
 - Packages contain their own price and short description
@@ -17,5 +19,3 @@ Capture your moments with me.
 - Firebase (for authentication and hosting)
 - Bootstrap and React Bootstrap (as CSS framework)
 - React-Firebase-hook (a built in library for better firebase experience)
-
-- [Live Link](https://github.com/facebook/create-react-app).

@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="p-3 bg-black sticky-bottom">
-      <footer>
+    <div>
+      <footer className="p-3 bg-black bottom">
         <p className="text-white text-center">
           {<span>&copy;</span>} All right reserved {new Date().getFullYear()}
         </p>

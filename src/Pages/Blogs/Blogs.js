@@ -6,16 +6,19 @@ import Q3 from "./Q3";
 const Blogs = () => {
   return (
     <div className="container">
-      <div className="row mb-5 g-5 gx-lg-5 py-5 px-2">
+      <h2 className=" text-center mt-5">
+        <b>Things to know</b>
+      </h2>
+      <div className=" row g-5 mb-5">
         <div className="col-12 col-md-6 col-lg-4 p-3 border border-dark rounded-3 shadow-lg">
           <Q1></Q1>
         </div>
 
-        <div className="col-12 col-md-6 col-lg-4 p-3 border border-dark rounded-3 shadow-lg">
+        <div className="col-sm-12 col-md-6 col-lg-4 p-3 border border-dark rounded-3 shadow-lg">
           <Q2></Q2>
         </div>
 
-        <div className="col-12 col-md-6 col-lg-4 p-3 border border-dark rounded-3 shadow-lg">
+        <div className="col col-12 col-md-6 col-lg-4 p-3 border border-dark rounded-3 shadow-lg">
           <Q3></Q3>
         </div>
       </div>

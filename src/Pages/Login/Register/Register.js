@@ -52,7 +52,12 @@ const Login = () => {
       <Form onSubmit={handleRegister}>
         <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Label>Your name</Form.Label>
-          <Form.Control ref={nameRef} type="text" placeholder="Enter Name" />
+          <Form.Control
+            ref={nameRef}
+            type="text"
+            placeholder="Enter Name"
+            required
+          />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>

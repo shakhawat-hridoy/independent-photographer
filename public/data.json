@@ -1,44 +1,44 @@
 [
     {
         "id":1,
-        "img":"https://images.unsplash.com/photo-1573676048035-9c2a72b6a12a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHdlZGRpbmclMjBwaG90b2dyYXBoeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+        "img":"https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8d2VkZGluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
         "name":"Wedding",
         "price":20000,
-        "description":"kuahdawkusjhdkajhku"
+        "description":"Wedding is always one of the most memorable day in our life. Make the  moment more glorious with us."
     },
     {
         "id":2,
         "img":"https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fG1vZGVsaW5nJTIwcGhvdG9ncmFwaHklMjBzZXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
         "name":"Modeling",
         "price":30000,
-        "description":"kuahdawkusjhdkajhkukjsdfhaksujdhask"
+        "description":"Profession is above all. If you think you are worthy of something then just go for it."
     },
     {
         "id":3,
         "img":"https://images.unsplash.com/photo-1551818255-e6e10975bc17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29ycG9yYXRlJTIwZXZlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
         "name":"Corporate Event",
-        "price":15000,
-        "description":"kuahdawkusjhdekjdfkajskSDjlakdjlKkajhku"
+        "price":25000,
+        "description":"A glamorous event makes your image clear. Its an era of competetion. Make sure you are up to date."
     },
     {
         "id":4,
         "img":"https://images.unsplash.com/photo-1582711012124-a56cf82307a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZmVzdGl2YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
         "name":"Festival",
-        "price":15000,
-        "description":"kuahdawkusjhdekjdfkajskSDjlakdjlKkajhku"
+        "price":10000,
+        "description":"Festival brings endless joy in our life. Enjoy the time with your friends and family."
     },
     {
         "id":5,
         "img":"https://images.unsplash.com/photo-1566004100631-35d015d6a491?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
         "name":"Baby",
-        "price":15000,
-        "description":"kuahdawkusjhdekjdfkajskSDjlakdjlKkajhku"
+        "price":20000,
+        "description":"Don't forget the moment when you have become a father/mother for the firs time."
     },
     {
         "id":6,
         "img":"https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dW5pdmVyc2l0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60",
         "name":"University Days",
         "price":15000,
-        "description":"kuahdawkusjhdekjdfkajskSDjlakdjlKkajhku"
+        "description":"Memory of university life always makes us nostalgic. These moments deserve to be kept in frames"
     }
 ]

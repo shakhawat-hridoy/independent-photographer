@@ -1,4 +1,5 @@
 import React from "react";
+import avatar from "../../images/male-avatar.jpg";
 
 const About = () => {
   return (
@@ -9,7 +10,7 @@ const About = () => {
             height={250}
             width={250}
             className="rounded-circle"
-            src="https://thumbs.dreamstime.com/b/unknown-male-avatar-profile-image-businessman-vector-unknown-male-avatar-profile-image-businessman-vector-profile-179373829.jpg"
+            src={avatar}
             alt=""
           />
           <h5>

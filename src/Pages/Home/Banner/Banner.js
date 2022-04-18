@@ -13,28 +13,13 @@ const Banner = () => {
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
-        <img
-          height={500}
-          className="d-block w-100"
-          src={photographer1}
-          alt="First slide"
-        />
+        <img height={500} className="d-block w-100" src={photographer2} />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          height={500}
-          className="d-block w-100"
-          src={photographer2}
-          alt="Second slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h1>Photographer</h1>
+          <p>
+            Your trustworthy partner.
+            <span> Capture Your moments with us</span>
+          </p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -42,14 +27,27 @@ const Banner = () => {
           height={500}
           className="d-block w-100"
           src={photographer3}
+          alt="Second slide"
+        />
+
+        <Carousel.Caption>
+          <h1>We don't just take a photograph</h1>
+          <p>
+            We simply make it. <span> Be with us</span>
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          height={500}
+          className="d-block w-100"
+          src={photographer1}
           alt="Third slide"
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <h1>Photography is art of living in frames</h1>
+          <p>Nothin can represent you better than a photo.</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
